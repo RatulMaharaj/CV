@@ -5,7 +5,7 @@ function Skills() {
 
   return (
     <div className={SkillsStyles.container}>
-      Skills
+      <h4>Skills</h4>
     </div>
   )
 }

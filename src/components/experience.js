@@ -5,7 +5,7 @@ function Experience() {
 
   return (
     <div className={ExperienceStyles.container}>
-      Experience
+      <h4>Experience</h4>
     </div>
   )
 }
