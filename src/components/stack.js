@@ -22,7 +22,6 @@ function Stack() {
   }
 `)
   const stack = data.allContentfulTechStack.edges
-  console.log(stack)
   return (
     <>
       <div className={StackStyles.container}>
@@ -32,7 +31,7 @@ function Stack() {
         {
           stack.map(edge => {
             return (
-              <a href={edge.node.link} target="_blank" rel="noreferrer">
+              <a key={edge.node.logo.id} href={edge.node.link} target="_blank" rel="noreferrer">
                 <img className={`grayscale`} src={edge.node.logo.file.url} alt="Stack"></img>
                 <p className={StackStyles.logoText}>{edge.node.name}</p>
               </a>

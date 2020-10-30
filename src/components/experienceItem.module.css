@@ -1,0 +1,55 @@
+.container {
+    margin-top: 1rem;
+}
+
+.wrapper {
+    padding: 1rem 0;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.dates {
+    white-space: nowrap;
+    width: auto;
+    margin-top: -0.75rem;
+}
+
+.company {
+    padding-left: 3rem;
+    align-items: flex-start;
+    align-self: flex-start;
+    width: 40%;
+}
+
+.logo {
+    max-width: 250px;
+}
+
+.content {
+    padding-left: 1rem;
+    align-items: flex-start;
+}
+
+.content>* {
+    align-items: flex-start;
+    justify-content: flex-start;
+    text-align: left;
+    padding-right: 3rem;
+}
+
+@media screen and (max-width:768px) {
+    .wrapper {
+        flex-direction: column;
+    }
+    .company {
+        padding: 0;
+        align-items: center;
+        width: 100%;
+    }
+    .content {
+        margin-top: 1rem;
+    }
+    .content>* {
+        padding-right: 1rem;
+    }
+}
