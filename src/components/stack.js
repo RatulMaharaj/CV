@@ -5,7 +5,7 @@ import StackStyles from "./stack.module.css"
 function Stack() {
   const data = useStaticQuery(graphql`
   {
-    allContentfulTechStack {
+    allContentfulTechStack(sort: {fields: order}) {
       edges {
         node {
           name
@@ -21,11 +21,27 @@ function Stack() {
     }
   }
 `)
-  console.log(data)
+  const stack = data.allContentfulTechStack.edges
+  console.log(stack)
   return (
-    <div className={StackStyles.container}>
-      <h4>Stack</h4>
-    </div>
+    <>
+      <div className={StackStyles.container}>
+        <div>
+          <h4>Tech Stack</h4>
+        </div>
+        {
+          stack.map(edge => {
+            return (
+              <a href={edge.node.link} target="_blank" rel="noreferrer">
+                <img className={`grayscale`} src={edge.node.logo.file.url} alt="Stack"></img>
+                <p className={StackStyles.logoText}>{edge.node.name}</p>
+              </a>
+            )
+          }
+          )
+        }
+      </div>
+    </>
   )
 }
 

@@ -14,6 +14,7 @@
     "gatsby-plugin-sharp": "^2.6.43",
     "gatsby-source-contentful": "^3.0.5",
     "gatsby-source-filesystem": "^2.3.35",
+    "gatsby-transformer-inline-svg": "0.0.7",
     "gatsby-transformer-sharp": "^2.5.19",
     "prop-types": "^15.7.2",
     "react": "^16.12.0",

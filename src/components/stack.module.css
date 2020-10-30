@@ -1,4 +1,48 @@
 .container {
     width: 100%;
-    background-color: olive;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding: 1rem;
+    margin-top: 1rem;
+    background-color: var(--low-opacity-white);
+    width: 100%;
+    min-height: 150px;
+    border-radius: 0.5rem;
+    -webkit-box-shadow: 0px 17px 28px -11px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0px 17px 28px -11px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 17px 28px -11px rgba(0, 0, 0, 0.1);
+}
+
+.container>a {
+    margin: 1rem 1.5rem 0 1.5rem;
+}
+
+.container>a>img {
+    width: 50px;
+    height: auto;
+}
+
+.logoText {
+    color: var(--very-dark-grey);
+    font-size: small;
+    opacity: 0;
+    transition: all ease-in-out 0.5s;
+}
+
+.container>a:hover>.logoText {
+    transition: all ease-in-out 0s;
+    opacity: 1;
+}
+
+@media screen and (max-width:768px) {
+    .container>a {
+        margin: 1rem 1rem 0 1rem;
+    }
+}
+
+@media screen and (max-width:480px) {
+    .container>a {
+        margin: 1rem 0.5rem 0 0.5rem;
+    }
 }

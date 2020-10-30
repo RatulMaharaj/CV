@@ -7,7 +7,7 @@
   --low-opacity-white: rgba(255, 255, 255, 0.7);
   --grey: #eeeeee;
   --dark-grey: #acacac;
-  --very-dark-grey: rgb(39, 39, 39);
+  --very-dark-grey: rgb(49, 49, 49);
   --main-accent: #6fb7f1d5;
 }
 
@@ -27,7 +27,7 @@ body {
   background-color: var(--bg);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: hsla(0, 0%, 0%, 0.8);
+  color: var(--very-dark-grey);
   font-family: 'Open Sans', georgia, sans-serif, serif;
   font-weight: normal;
   word-wrap: break-word;
@@ -64,11 +64,15 @@ div {
   text-align: center;
 }
 
-h1, h2, h3, h4 {
+h1, h2, h3, h4, h5, h6 {
   margin: 1rem 0;
   padding: 0;
   font-family: inherit;
-  color: inherit;
+  color: var(--very-dark-grey);
+}
+
+h4 {
+  border-bottom: 1px dashed var(--very-dark-grey);
 }
 
 p {
@@ -77,6 +81,20 @@ p {
   font-family: inherit;
   color: inherit;
   font-size: smaller;
+}
+
+.grayscale {
+  filter: grayscale(100%);
+  -webkit-filter: grayscale(100%);
+  opacity: 0.35;
+  transition: all ease-out 0.5s;
+}
+
+.grayscale:hover {
+  transition: all ease-out 0s;
+  filter: none;
+  -webkit-filter: grayscale(0%);
+  opacity: 1;
 }
 
 article, aside, details, figcaption, figure, footer, header, main, menu, nav, section, summary {
