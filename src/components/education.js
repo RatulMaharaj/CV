@@ -1,5 +1,5 @@
 import React from "react"
-import EducationStyles from "./Education.module.css"
+import EducationStyles from "./education.module.css"
 import { useStaticQuery, graphql } from "gatsby"
 import ExperienceItem from "./experienceItem"
 
