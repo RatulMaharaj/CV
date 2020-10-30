@@ -17,6 +17,11 @@ function IndexPage({ data }) {
       <Experience />
       <Education />
       {/* <Skills /> */}
+      <div style={{ height: `5rem` }}>
+        <p>
+          &copy; {data.allContentfulAbout.edges[0].node.fullName}
+        </p>
+      </div>
     </>
   )
 }

@@ -38,21 +38,22 @@ function Experience() {
       <div>
         <h4>Work Experience</h4>
       </div>
-      {
-        workExperience.map(edge => {
-          console.log(edge)
-          return (
-            <ExperienceItem key={edge.node.id}
-              startDate={`${months[new Date(edge.node.startDate).getMonth()]} ${new Date(edge.node.startDate).getFullYear()} `}
-              endDate={edge.node.currentRole ? `Present` : `${months[new Date(edge.node.endDate).getMonth()]} ${new Date(edge.node.endDate).getFullYear()}`}
-              logo={edge.node.logo}
-              company={edge.node.companyName}
-              achievements={edge.node.achievements}
-              role={edge.node.role}
-            />
-          )
-        })
-      }
+      <div>
+        {
+          workExperience.map(edge => {
+            return (
+              <ExperienceItem key={edge.node.id}
+                startDate={`${months[new Date(edge.node.startDate).getMonth()]} ${new Date(edge.node.startDate).getFullYear()} `}
+                endDate={edge.node.currentRole ? `Present` : `${months[new Date(edge.node.endDate).getMonth()]} ${new Date(edge.node.endDate).getFullYear()}`}
+                logo={edge.node.logo}
+                company={edge.node.companyName}
+                achievements={edge.node.achievements}
+                role={edge.node.role}
+              />
+            )
+          })
+        }
+      </div>
     </div>
   )
 }
