@@ -5,7 +5,9 @@ import Intro from "../components/intro"
 import Stack from "../components/stack"
 import Experience from "../components/experience"
 import Education from "../components/education"
+import Footer from "../components/footer"
 // import Skills from "../components/skills"
+
 import "./main.css"
 
 function IndexPage({ data }) {
@@ -17,11 +19,7 @@ function IndexPage({ data }) {
       <Experience />
       <Education />
       {/* <Skills /> */}
-      <div style={{ height: `5rem` }}>
-        <p>
-          &copy; {data.allContentfulAbout.edges[0].node.fullName}
-        </p>
-      </div>
+      <Footer fullName={data.allContentfulAbout.edges[0].node.fullName} />
     </>
   )
 }

@@ -60,13 +60,13 @@ function Intro() {
             {about.location}
           </p>
           <div className={IntroStyles.social}>
-            <a className={IntroStyles.linkedin} href={`mailto:${about.linkedIn}`}>
+            <a className={IntroStyles.linkedin} href={about.linkedIn} target="_blank" rel="noreferrer">
               <FaLinkedin />
             </a>
-            <a className={IntroStyles.email} href={about.email}>
+            <a className={IntroStyles.email} href={`mailto:${about.email}`}>
               <FaEnvelope />
             </a>
-            <a className={IntroStyles.pdf} href={about.pdf.file.url}>
+            <a className={IntroStyles.pdf} href={about.pdf.file.url} target="_blank" rel="noreferrer">
               <FaFilePdf />
             </a>
           </div>
