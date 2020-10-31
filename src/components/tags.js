@@ -1,7 +1,6 @@
 import React from 'react'
 import TagStyles from "./tags.module.css"
 function Tags(props) {
-    console.log(props.tags)
     return (
         <>
             {

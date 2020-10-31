@@ -33,6 +33,7 @@ function Experience() {
   const workExperience = data.allContentfulWorkExperience.edges
   var months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
     "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+
   return (
     <div className={ExperienceStyles.container}>
       <div>
@@ -49,6 +50,7 @@ function Experience() {
                 company={edge.node.companyName}
                 achievements={edge.node.achievements}
                 role={edge.node.role}
+                taglist={edge.node.tags}
               />
             )
           })

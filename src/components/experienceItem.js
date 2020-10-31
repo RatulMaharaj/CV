@@ -5,7 +5,6 @@ import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 import Tags from "../components/tags"
 
 function ExperienceItem(props) {
-
     return (
         <div className={ExperienceItemStyles.container}>
             <div className={ExperienceItemStyles.dates}>
@@ -26,7 +25,7 @@ function ExperienceItem(props) {
                     <h5>{props.role}</h5>
                     {documentToReactComponents(props.achievements.json)}
                     <div className={ExperienceItemStyles.tags}>
-                        <Tags tags={['SAM Reporting', 'Valuations', 'Data Management']} />
+                        <Tags tags={props.taglist} />
                     </div>
                 </div>
             </div>
