@@ -10,6 +10,15 @@
     box-shadow: 0px 17px 28px -11px rgba(0, 0, 0, 0.1);
 }
 
+@keyframes RotateClockwise {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
 .imageContainer {
     justify-content: flex-start !important;
     align-items: flex-start !important;
@@ -19,15 +28,32 @@
     border-radius: 50%;
     margin-top: -2.5rem;
     margin-bottom: 1rem;
-    -webkit-box-shadow: 0px 17px 28px -11px rgba(0, 0, 0, 0.5);
-    -moz-box-shadow: 0px 17px 28px -11px rgba(0, 0, 0, 0.5);
-    box-shadow: 0px 17px 28px -11px rgba(0, 0, 0, 0.5);
-    border: 5px solid var(--main-accent);
+    padding: 5px;
+    animation-name: RotateClockwise;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-fill-mode: backwards;
+    background-image: linear-gradient(var(--main-accent), var(--dark-grey));
     z-index: 99;
+}
+
+@keyframes RotateAntiClockwise {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(-360deg);
+    }
 }
 
 .imageContainer>* {
     border-radius: 50%;
+    animation-name: RotateAntiClockwise;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-fill-mode: backwards;
 }
 
 .introContentContainer {

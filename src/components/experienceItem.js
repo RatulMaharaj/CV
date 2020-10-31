@@ -2,6 +2,7 @@ import React from 'react'
 import ExperienceItemStyles from "./experienceItem.module.css"
 import Img from 'gatsby-image'
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
+import Tags from "../components/tags"
 
 function ExperienceItem(props) {
 
@@ -24,6 +25,9 @@ function ExperienceItem(props) {
                 <div className={ExperienceItemStyles.content}>
                     <h5>{props.role}</h5>
                     {documentToReactComponents(props.achievements.json)}
+                    <div className={ExperienceItemStyles.tags}>
+                        <Tags tags={['SAM Reporting', 'Valuations', 'Data Management']} />
+                    </div>
                 </div>
             </div>
         </div>

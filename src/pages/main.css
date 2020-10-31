@@ -1,17 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
-/* css variable declaration */
-
 :root {
+  /* css variable declaration */
   --bg: #eee;
   --white: #fff;
   --low-opacity-white: rgba(255, 255, 255, 0.7);
   --grey: #eeeeee;
   --dark-grey: #acacac;
   --very-dark-grey: rgb(49, 49, 49);
-  --main-accent: #6fb7f1d5;
+  --main-accent: #47adf1dc;
 }
 
 /* Over-arching css styles */
+
+::-moz-selection {
+  /* Code for Firefox */
+  background: var(--grey);
+}
+
+::selection {
+  background: var(--grey);
+}
 
 html {
   -ms-text-size-adjust: 100%;

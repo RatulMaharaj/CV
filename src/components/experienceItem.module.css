@@ -37,6 +37,13 @@
     padding-right: 3rem;
 }
 
+.tags {
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 1rem 0;
+}
+
 @media screen and (max-width:768px) {
     .wrapper {
         flex-direction: column;
