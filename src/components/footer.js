@@ -4,9 +4,9 @@ import FooterStyles from "./footer.module.css"
 function Footer(props) {
     return (
         <div className={FooterStyles.container}>
-            <p>
-                &copy; {props.fullName}
-            </p>
+            <div>
+                <p>&copy; {props.fullName}</p>
+            </div>
         </div>
     )
 }

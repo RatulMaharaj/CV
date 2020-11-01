@@ -23,6 +23,7 @@
 }
 
 html {
+  background-color: var(--bg);
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   font: 112.5%/1.45em 'Open Sans', georgia, serif, sans-serif;
@@ -90,12 +91,6 @@ p {
   font-family: inherit;
   color: inherit;
   font-size: smaller;
-}
-
-@media print {
-  div {
-    page-break-before: always;
-  }
 }
 
 .grayscale {

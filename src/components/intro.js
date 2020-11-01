@@ -25,11 +25,6 @@ function Intro() {
                 }
               }
             }
-            pdf {
-              file {
-                url
-              }
-            }
             profilePicture {
               id
               fluid(maxWidth: 500) {
@@ -79,7 +74,7 @@ function Intro() {
             </motion.a>
             <motion.a
               className={IntroStyles.pdf}
-              href={about.pdf.file.url}
+              href={`cv.pdf`}
               target="_blank"
               rel="noreferrer"
               whileHover={{ scale: 1.5, y: 10 }}
