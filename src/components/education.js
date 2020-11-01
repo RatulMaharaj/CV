@@ -50,6 +50,7 @@ function Education() {
                 company={edge.node.school}
                 achievements={edge.node.achievements}
                 role={edge.node.role}
+                isRecommendation={false}
               />
             )
           })

@@ -25,6 +25,13 @@
     max-width: 250px;
 }
 
+.circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    align-self: center;
+}
+
 .content {
     padding-left: 1rem;
     align-items: flex-start;

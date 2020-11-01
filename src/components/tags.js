@@ -7,7 +7,7 @@ function Tags(props) {
                 props.tags ?
                     (props.tags.map(tag => {
                         return (
-                            <div className={TagStyles.tagContainer}>
+                            <div key={tag} className={TagStyles.tagContainer}>
                                 <a href={`https://google.com/search?q=${tag}`} target="_blank" rel="noreferrer">
                                     {tag}
                                 </a>

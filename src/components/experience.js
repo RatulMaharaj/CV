@@ -51,6 +51,7 @@ function Experience() {
                 achievements={edge.node.achievements}
                 role={edge.node.role}
                 taglist={edge.node.tags}
+                isRecommendation={false}
               />
             )
           })

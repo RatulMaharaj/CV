@@ -7,16 +7,22 @@ import Tags from "../components/tags"
 function ExperienceItem(props) {
     return (
         <div className={ExperienceItemStyles.container}>
-            <div className={ExperienceItemStyles.dates}>
-                <strong>
-                    {props.startDate} - {props.endDate}
-                </strong>
-            </div>
+            {
+                props.startDate && props.endDate ?
+                    <div className={ExperienceItemStyles.dates}>
+                        <strong>
+                            {props.startDate} - {props.endDate}
+                        </strong>
+                    </div>
+
+                    :
+                    null
+            }
             <div className={ExperienceItemStyles.wrapper}>
                 <div className={ExperienceItemStyles.company}>
                     {
                         props.logo ?
-                            <Img className={ExperienceItemStyles.logo} fluid={props.logo.fluid} />
+                            <Img className={props.isRecommendation ? ExperienceItemStyles.circle : ExperienceItemStyles.logo} fluid={props.logo.fluid} />
                             :
                             <h5 style={{ textTransform: `uppercase` }}>{props.company}</h5>
                     }

@@ -6,8 +6,7 @@ import Stack from "../components/stack"
 import Experience from "../components/experience"
 import Education from "../components/education"
 import Footer from "../components/footer"
-// import Skills from "../components/skills"
-
+import Recommendations from "../components/recommendations"
 import "./main.css"
 
 function IndexPage({ data }) {
@@ -18,7 +17,7 @@ function IndexPage({ data }) {
       <Stack />
       <Experience />
       <Education />
-      {/* <Skills /> */}
+      <Recommendations />
       <Footer fullName={data.allContentfulAbout.edges[0].node.fullName} />
     </>
   )
