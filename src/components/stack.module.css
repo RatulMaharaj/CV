@@ -30,6 +30,12 @@
     transition: all ease-in-out 0.5s;
 }
 
+@media print {
+    .logoText {
+        opacity: 1 !important;
+    }
+}
+
 .container>a:hover>.logoText {
     transition: all ease-in-out 0s;
     opacity: 1;

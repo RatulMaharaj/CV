@@ -93,6 +93,18 @@ p {
   font-size: smaller;
 }
 
+@media print {
+  body {
+    -webkit-print-color-adjust: exact !important;
+    background-color: var(--bg);
+  }
+  .grayscale {
+    filter: none !important;
+    -webkit-filter: none !important;
+    opacity: 1 !important;
+  }
+}
+
 .grayscale {
   filter: grayscale(100%);
   -webkit-filter: grayscale(100%);
