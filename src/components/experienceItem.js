@@ -24,7 +24,7 @@ function ExperienceItem(props) {
                         props.logo ?
                             <Img className={props.isRecommendation ? ExperienceItemStyles.circle : ExperienceItemStyles.logo} fluid={props.logo.fluid} />
                             :
-                            <h5 style={{ textTransform: `uppercase` }}>{props.company}</h5>
+                            <h5>{props.company}</h5>
                     }
                 </div>
                 <div className={ExperienceItemStyles.content}>

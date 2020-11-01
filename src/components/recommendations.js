@@ -40,7 +40,9 @@ function Recommendations() {
   else {
     return (
       <div className={RecommendationsStyles.container}>
-        <h4>Recommendations</h4>
+        <div>
+          <h4>Recommendations</h4>
+        </div>
         <div>
           {
             recommendations.map(edge => {

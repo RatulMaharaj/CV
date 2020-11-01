@@ -1,5 +1,7 @@
 import React from 'react'
 import TagStyles from "./tags.module.css"
+import { motion } from "framer-motion";
+
 function Tags(props) {
     return (
         <>
@@ -7,11 +9,15 @@ function Tags(props) {
                 props.tags ?
                     (props.tags.map(tag => {
                         return (
-                            <div key={tag} className={TagStyles.tagContainer}>
+                            <motion.div
+                                key={tag}
+                                className={TagStyles.tagContainer}
+                                whileHover={{ scale: 1.1 }}
+                            >
                                 <a href={`https://google.com/search?q=${tag}`} target="_blank" rel="noreferrer">
                                     {tag}
                                 </a>
-                            </div>
+                            </motion.div>
                         )
                     })
                     )

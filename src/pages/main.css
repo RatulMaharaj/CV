@@ -7,7 +7,8 @@
   --grey: #eeeeee;
   --dark-grey: #acacac;
   --very-dark-grey: rgb(49, 49, 49);
-  --main-accent: #47adf1dc;
+  --main-accent: #60b848;
+  --secondary-accent: #009677;
 }
 
 /* Over-arching css styles */
@@ -89,6 +90,12 @@ p {
   font-family: inherit;
   color: inherit;
   font-size: smaller;
+}
+
+@media print {
+  div {
+    page-break-before: always;
+  }
 }
 
 .grayscale {
@@ -321,6 +328,7 @@ textarea {
 ol, ul {
   margin: 0;
   margin-left: 2.5rem;
+  margin-bottom: 0.5rem;
   padding: 0;
   list-style-position: outside;
   list-style-image: none;

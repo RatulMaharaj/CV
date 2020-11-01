@@ -36,7 +36,7 @@ function Experience() {
 
   return (
     <div className={ExperienceStyles.container}>
-      <div>
+      <div >
         <h4>Work Experience</h4>
       </div>
       <div>

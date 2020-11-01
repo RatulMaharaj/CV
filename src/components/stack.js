@@ -1,5 +1,6 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
+import { motion } from "framer-motion";
 import StackStyles from "./stack.module.css"
 
 function Stack() {
@@ -31,8 +32,17 @@ function Stack() {
         {
           stack.map(edge => {
             return (
-              <a key={edge.node.logo.id} href={edge.node.link} target="_blank" rel="noreferrer">
-                <img className={`grayscale`} src={edge.node.logo.file.url} alt="Stack"></img>
+              <a
+                key={edge.node.logo.id}
+                href={edge.node.link}
+                target="_blank"
+                rel="noreferrer"
+              >
+                <motion.img
+                  className={`grayscale`}
+                  src={edge.node.logo.file.url}
+                  alt="Stack"
+                  whileHover={{ scale: 1.3, rotate: 360 }}></motion.img>
                 <p className={StackStyles.logoText}>{edge.node.name}</p>
               </a>
             )
