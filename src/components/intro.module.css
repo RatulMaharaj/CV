@@ -121,3 +121,9 @@
 .pdf:hover, .pdf:active {
     color: #F40F02;
 }
+
+@media print {
+    .pdf {
+        display: none;
+    }
+}
