@@ -18,6 +18,7 @@ function Intro() {
             email
             location
             currentJobTitle
+            pdfUrl
             bio {
               content {
                 content {
@@ -74,7 +75,7 @@ function Intro() {
             </motion.a>
             <motion.a
               className={IntroStyles.pdf}
-              href={`cv.pdf`}
+              href={about.pdfUrl}
               target="_blank"
               rel="noreferrer"
               whileHover={{ scale: 1.5, y: 10 }}
