@@ -12,13 +12,13 @@ import "./main.css"
 function IndexPage({ data }) {
   return (
     <>
-      <SEO title={data.allContentfulAbout.edges[0].node.fullName} />
+      <SEO title={data.allGraphCmsAbout.edges[0].node.fullName} />
       <Intro />
       <Stack />
-      <Experience />
-      <Education />
-      <Recommendations />
-      <Footer fullName={data.allContentfulAbout.edges[0].node.fullName} />
+      {/* <Experience /> */}
+      {/* <Education /> */}
+      {/* <Recommendations /> */}
+      {/* <Footer fullName={data.allContentfulAbout.edges[0].node.fullName} /> */}
     </>
   )
 }
@@ -26,7 +26,7 @@ export default IndexPage
 
 export const query = graphql`
 {
-  allContentfulAbout {
+  allGraphCmsAbout {
     edges {
       node {
         fullName
