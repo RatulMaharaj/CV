@@ -45,6 +45,18 @@
     padding-right: 3rem;
 }
 
+.richText div {
+    display: inline;
+}
+
+.richText a {
+    color: var(--main-accent);
+}
+
+.richText a:hover {
+    color: var(--secondary-accent);
+}
+
 .tags {
     flex-direction: row;
     align-items: center;

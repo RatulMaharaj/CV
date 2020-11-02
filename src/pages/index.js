@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect } from "react"
 import { graphql } from "gatsby"
 import SEO from "../components/seo"
 import Intro from "../components/intro"
@@ -10,6 +10,12 @@ import Recommendations from "../components/recommendations"
 import "./main.css"
 
 function IndexPage({ data }) {
+  useEffect(() => {
+    let root = document.documentElement;
+    root.style.setProperty('--main-accent', data.allGraphCmsAbout.edges[0].node.mainAccent.hex)
+    root.style.setProperty('--secondary-accent', data.allGraphCmsAbout.edges[0].node.secondaryAccent.hex)
+  }, [data.allGraphCmsAbout.edges])
+
   return (
     <>
       <SEO title={data.allGraphCmsAbout.edges[0].node.fullName} />
@@ -30,6 +36,12 @@ export const query = graphql`
     edges {
       node {
         fullName
+        mainAccent {
+          hex
+        }
+        secondaryAccent {
+          hex
+        }
       }
     }
   }

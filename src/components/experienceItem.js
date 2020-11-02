@@ -33,6 +33,7 @@ function ExperienceItem(props) {
                     <h5>{props.role}</h5>
                     <div
                         dangerouslySetInnerHTML={{ __html: props.achievements.html }}
+                        className={ExperienceItemStyles.richText}
                     >
                     </div>
                     <div className={ExperienceItemStyles.tags}>
