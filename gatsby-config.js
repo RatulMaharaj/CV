@@ -10,10 +10,10 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-transformer-inline-svg`,
     {
-      resolve: `gatsby-source-contentful`,
+      resolve: 'gatsby-source-graphcms',
       options: {
-        spaceId: `27knv66l69td`,
-        accessToken: process.env.CMS_ACCESS_TOKEN,
+        endpoint: process.env.GRAPHCMS_ENDPOINT,
+        token: process.env.GRAPHCMS_TOKEN,
       },
     },
     {

@@ -1,52 +1,45 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import { FaLinkedin, FaEnvelope, FaFilePdf } from 'react-icons/fa'
-import Img from "gatsby-image"
+import GraphImg from "graphcms-image";
 import { motion } from "framer-motion";
 import IntroStyles from "./intro.module.css"
 
 function Intro() {
   const data = useStaticQuery(graphql`
     {
-      allContentfulAbout {
+      allGraphCmsAbout {
         edges {
           node {
             id
             fullName
             linkedIn
-            blog
             email
             location
+            bio
             currentJobTitle
             pdfUrl
-            bio {
-              content {
-                content {
-                  value
-                }
-              }
-            }
             profilePicture {
-              id
-              fluid(maxWidth: 500) {
-                ...GatsbyContentfulFluid
-              }
+              handle
+              height
+              width
             }
           }
         }
       }
     }
   `)
-  const about = data.allContentfulAbout.edges[0].node
+  const about = data.allGraphCmsAbout.edges[0].node
+  const bio = about.bio
+  console.log(data)
   return (
     <div className={IntroStyles.container}>
       <div
         className={IntroStyles.imageContainer}
       >
-        <Img
-          fluid={about.profilePicture.fluid}
-          key={about.profilePicture.fluid.src}
-          alt={about.profilePicture.title}
+        <GraphImg
+          className={IntroStyles.profilePicture}
+          image={about.profilePicture} maxWidth={500}
         />
       </div>
       <div className={IntroStyles.introContentContainer}>
@@ -56,7 +49,7 @@ function Intro() {
         </div>
         <div>
           <p>
-            {about.location}
+            {about.location || ``}
           </p>
           <div className={IntroStyles.social}>
             <motion.a className={IntroStyles.linkedin}
@@ -86,7 +79,7 @@ function Intro() {
         </div>
       </div>
       <div className={IntroStyles.belowContainer}>
-        {about.bio.content[0].content[0].value}
+        {bio || ``}
       </div>
     </div>
   )
