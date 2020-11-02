@@ -31,7 +31,6 @@ function Intro() {
   `)
   const about = data.allGraphCmsAbout.edges[0].node
   const bio = about.bio
-  console.log(data)
   return (
     <div className={IntroStyles.container}>
       <div

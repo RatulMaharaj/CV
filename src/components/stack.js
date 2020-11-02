@@ -9,6 +9,7 @@ function Stack() {
         allGraphCmsTechStack(sort: {fields: order}) {
         edges {
             node {
+            id
             name
             link
             logo {
@@ -30,7 +31,7 @@ function Stack() {
                     stack.map(edge => {
                         return (
                             <a
-                                key={edge.node.logo.id}
+                                key={edge.node.id}
                                 href={edge.node.link}
                                 target="_blank"
                                 rel="noreferrer"

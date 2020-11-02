@@ -67,4 +67,7 @@
     .content>* {
         padding-right: 1rem;
     }
+    .logo {
+        align-self: center;
+    }
 }

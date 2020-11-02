@@ -1,8 +1,6 @@
 import React from 'react'
 import ExperienceItemStyles from "./experienceItem.module.css"
-import Img from 'gatsby-image'
 import GraphImg from "graphcms-image";
-import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import Tags from "../components/tags"
 
 function ExperienceItem(props) {

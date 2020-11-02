@@ -15,10 +15,10 @@ function IndexPage({ data }) {
       <SEO title={data.allGraphCmsAbout.edges[0].node.fullName} />
       <Intro />
       <Stack />
-      {/* <Experience /> */}
-      {/* <Education /> */}
-      {/* <Recommendations /> */}
-      {/* <Footer fullName={data.allContentfulAbout.edges[0].node.fullName} /> */}
+      <Experience />
+      <Education />
+      <Recommendations />
+      <Footer fullName={data.allGraphCmsAbout.edges[0].node.fullName} />
     </>
   )
 }
