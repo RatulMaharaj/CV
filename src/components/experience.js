@@ -6,7 +6,7 @@ import ExperienceStyles from "./experience.module.css"
 function Experience() {
   const data = useStaticQuery(graphql`
   {
-    allContentfulWorkExperience(sort: {fields: startDate, order: DESC}) {
+    allGraphCmsWorkExperience(sort: {fields: startDate, order: DESC}) {
       edges {
         node {
           id
@@ -16,21 +16,20 @@ function Experience() {
           endDate
           currentRole
           tags
-          achievements {
-            json
-          }
           logo {
-            id
-            fluid(maxHeight: 500){
-              ...GatsbyContentfulFluid
-            }
+            handle
+            height
+            width
+          }
+          achievements {
+            html
           }
         }
       }
     }
   }
 `)
-  const workExperience = data.allContentfulWorkExperience.edges
+  const workExperience = data.allGraphCmsWorkExperience.edges
   var months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
     "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 
@@ -46,7 +45,7 @@ function Experience() {
               <ExperienceItem key={edge.node.id}
                 startDate={`${months[new Date(edge.node.startDate).getMonth()]} ${new Date(edge.node.startDate).getFullYear()} `}
                 endDate={edge.node.currentRole ? `Present` : `${months[new Date(edge.node.endDate).getMonth()]} ${new Date(edge.node.endDate).getFullYear()}`}
-                logo={edge.node.logo}
+                logo={edge.node.logo || false}
                 company={edge.node.companyName}
                 achievements={edge.node.achievements}
                 role={edge.node.role}

@@ -23,6 +23,7 @@
 
 .logo {
     max-width: 250px;
+    align-self: flex-start;
 }
 
 .circle {
