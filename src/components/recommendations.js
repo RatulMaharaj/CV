@@ -4,7 +4,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import ExperienceItem from "./experienceItem"
 
 function Recommendations() {
-    const data = useStaticQuery(graphql`
+  const data = useStaticQuery(graphql`
   {
     allGraphCmsRecommendations {
       edges {
@@ -27,44 +27,46 @@ function Recommendations() {
     }
   }
 `)
-    const recommendations = data.allGraphCmsRecommendations.edges
-    const show = []
-    recommendations.map(edge => show.push(edge.node.show))
+  const recommendations = data.allGraphCmsRecommendations.edges
+  const show = []
+  recommendations.map(edge => show.push(edge.node.show))
 
-    if (show.indexOf(true) === -1) {
-        return (
-            null
-        )
-    }
-    else {
-        return (
-            <div className={RecommendationsStyles.container}>
-                <div>
-                    <h4>Recommendations</h4>
-                </div>
-                <div>
-                    {
-                        recommendations.map(edge => {
-                            if (edge.node.show) {
-                                return (
-                                    <ExperienceItem key={edge.node.id}
-                                        startDate={null}
-                                        endDate={null}
-                                        isRecommendation={true}
-                                        logo={edge.node.profilePicture}
-                                        company={edge.node.company}
-                                        achievements={edge.node.recommendation}
-                                        role={`${edge.node.name}, ${edge.node.title} (${edge.node.company})`}
-                                    />
-                                )
-                            }
-                            else { return (null) }
-                        })
-                    }
-                </div>
-            </div>
-        )
-    }
+  if (show.indexOf(true) === -1) {
+    return (
+      null
+    )
+  }
+  else {
+    return (
+      <div className={RecommendationsStyles.container}>
+        <div>
+          <h4>Recommendations</h4>
+        </div>
+        <div>
+          {
+            recommendations.map(edge => {
+              if (edge.node.show) {
+                return (
+                  <ExperienceItem key={edge.node.id}
+                    startDate={null}
+                    endDate={null}
+                    isRecommendation={true}
+                    logo={edge.node.profilePicture}
+                    company={edge.node.company}
+                    achievements={edge.node.recommendation}
+                    role={edge.node.company}
+                    recommender={edge.node.name}
+                    recommenderTitle={edge.node.title}
+                  />
+                )
+              }
+              else { return (null) }
+            })
+          }
+        </div>
+      </div>
+    )
+  }
 }
 
 export default Recommendations

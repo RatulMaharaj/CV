@@ -28,6 +28,17 @@ function ExperienceItem(props) {
                             :
                             <h5>{props.company}</h5>
                     }
+                    {
+                        props.isRecommendation ?
+                            <div>
+                                <h5 style={{ marginBottom: `0` }}>
+                                    {props.recommender}
+                                </h5>
+                                <p>{props.recommenderTitle}</p>
+                            </div>
+                            :
+                            null
+                    }
                 </div>
                 <div className={ExperienceItemStyles.content}>
                     <h5>{props.role}</h5>
