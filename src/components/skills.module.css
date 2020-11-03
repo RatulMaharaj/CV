@@ -30,4 +30,9 @@
         margin: 0;
         margin-bottom: 1rem;
     }
+    .tagsWrapper {
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding: 1rem 0;
+    }
 }
