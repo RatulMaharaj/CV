@@ -11,7 +11,7 @@ function Tags(props) {
                         return (
                             <motion.div
                                 key={tag}
-                                className={TagStyles.tagContainer}
+                                className={`${TagStyles.tagContainer} ${props.tagColor}`}
                                 whileHover={{ scale: 1.1 }}
                             >
                                 <a href={`https://google.com/search?q=${tag}`} target="_blank" rel="noreferrer">
