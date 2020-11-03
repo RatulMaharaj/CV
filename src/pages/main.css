@@ -8,7 +8,9 @@
   --dark-grey: #acacac;
   --very-dark-grey: rgb(49, 49, 49);
   --main-accent: #acacac;
+  --main-accent-lo: rgba(172, 172, 172, 0.1);
   --secondary-accent: #acacac;
+  --secondary-accent-lo: rgba(172, 172, 172, 0.1);
 }
 
 /* Over-arching css styles */
@@ -121,6 +123,20 @@ p, li>div {
   filter: none;
   -webkit-filter: grayscale(0%);
   opacity: 1;
+}
+
+.HardTag {
+  border: 2px solid var(--main-accent);
+  background-color: var(--main-accent-lo);
+  color: var(--main-accent);
+  font-weight: bold;
+}
+
+.SoftTag {
+  background-color: var(--secondary-accent-lo);
+  border: 2px solid var(--secondary-accent);
+  color: var(--secondary-accent);
+  font-weight: bold;
 }
 
 article, aside, details, figcaption, figure, footer, header, main, menu, nav, section, summary {
