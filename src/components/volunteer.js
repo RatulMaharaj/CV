@@ -6,7 +6,7 @@ import ExperienceStyles from "./experience.module.css"
 function Experience() {
   const data = useStaticQuery(graphql`
   {
-    allGraphCmsWorkExperience(filter: {volunteerWork: {eq: false}}, sort: {fields: startDate, order: DESC}) {
+    allGraphCmsWorkExperience(filter: {volunteerWork: {eq: true}}, sort: {fields: startDate, order: DESC}) {
       edges {
         node {
           id
@@ -40,7 +40,7 @@ function Experience() {
     return (
       <div className={ExperienceStyles.container}>
         <div >
-          <h4>Work Experience</h4>
+          <h4>Volunteer Work</h4>
         </div>
         <div>
           {
