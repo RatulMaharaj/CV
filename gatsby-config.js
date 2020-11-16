@@ -19,8 +19,8 @@ module.exports = {
     {
       resolve: 'gatsby-source-graphcms',
       options: {
-        endpoint: process.env.GRAPHCMS_ENDPOINT1,
-        token: process.env.GRAPHCMS_TOKEN1,
+        endpoint: process.env.GRAPHCMS_ENDPOINT,
+        token: process.env.GRAPHCMS_TOKEN,
       },
     },
     {
