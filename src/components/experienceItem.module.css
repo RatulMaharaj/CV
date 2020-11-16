@@ -27,10 +27,11 @@
 }
 
 .circle {
-    width: 100px;
-    height: 100px;
+    width: 125px;
+    height: 125px;
     border-radius: 50%;
     align-self: center;
+    margin-bottom: 1em;
 }
 
 .content {

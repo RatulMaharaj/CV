@@ -26,7 +26,7 @@ function ExperienceItem(props) {
                                 image={props.logo}
                             />
                             :
-                            <h5>{props.company}</h5>
+                            <h5 className={props.isRecommendation ? `hide` : null}>{props.company}</h5>
                     }
                     {
                         props.isRecommendation ?

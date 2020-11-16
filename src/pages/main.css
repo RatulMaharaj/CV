@@ -139,6 +139,10 @@ p, li>div {
   font-weight: bold;
 }
 
+.hide {
+  display: none !important;
+}
+
 article, aside, details, figcaption, figure, footer, header, main, menu, nav, section, summary {
   display: block;
 }
