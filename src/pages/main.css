@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
 :root {
   /* css variable declaration */
   --bg: #eee;
@@ -28,7 +28,7 @@ html {
   background-color: var(--bg);
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
-  font: 112.5%/1.45em 'Open Sans', georgia, serif, sans-serif;
+  font: 112.5%/1.45em "Open Sans", georgia, serif, sans-serif;
   box-sizing: border-box;
   overflow-y: scroll;
 }
@@ -40,7 +40,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: var(--very-dark-grey);
-  font-family: 'Open Sans', georgia, sans-serif, serif;
+  font-family: "Open Sans", georgia, sans-serif, serif;
   font-weight: normal;
   word-wrap: break-word;
   font-kerning: normal;
@@ -52,13 +52,13 @@ body {
   flex-direction: column;
 }
 
-@media screen and (max-width:768px) {
+@media screen and (max-width: 768px) {
   body {
     padding: 1rem 3rem;
   }
 }
 
-@media screen and (max-width:480px) {
+@media screen and (max-width: 480px) {
   body {
     padding: 1rem 1rem;
   }
@@ -76,7 +76,12 @@ div {
   text-align: center;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin: 1rem 0;
   padding: 0;
   font-family: inherit;
@@ -91,7 +96,8 @@ h5 {
   margin-top: 0 !important;
 }
 
-p, li>div {
+p,
+li > div {
   margin: 0 !important;
   padding: 0;
   font-family: inherit;
@@ -100,9 +106,13 @@ p, li>div {
 }
 
 @media print {
+  * {
+    box-shadow: none !important;
+  }
+
   body {
     -webkit-print-color-adjust: exact !important;
-    background-color: var(--bg);
+    background-color: var(--white);
   }
   .grayscale {
     filter: none !important;
@@ -143,11 +153,25 @@ p, li>div {
   display: none !important;
 }
 
-article, aside, details, figcaption, figure, footer, header, main, menu, nav, section, summary {
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+main,
+menu,
+nav,
+section,
+summary {
   display: block;
 }
 
-audio, canvas, progress, video {
+audio,
+canvas,
+progress,
+video {
   display: inline-block;
 }
 
@@ -160,7 +184,8 @@ progress {
   vertical-align: baseline;
 }
 
-[hidden], template {
+[hidden],
+template {
   display: none;
 }
 
@@ -170,7 +195,8 @@ a {
   text-decoration: none;
 }
 
-a:active, a:hover {
+a:active,
+a:hover {
   outline-width: 0;
   text-decoration: none;
 }
@@ -180,7 +206,8 @@ abbr[title] {
   cursor: help;
 }
 
-b, strong {
+b,
+strong {
   font-weight: inherit;
   font-weight: bolder;
 }
@@ -198,7 +225,8 @@ small {
   font-size: 80%;
 }
 
-sub, sup {
+sub,
+sup {
   font-size: 75%;
   line-height: 0;
   position: relative;
@@ -228,7 +256,10 @@ svg:not(:root) {
   overflow: hidden;
 }
 
-code, kbd, pre, samp {
+code,
+kbd,
+pre,
+samp {
   font-family: monospace;
   font-size: 1em;
 }
@@ -260,7 +291,11 @@ hr {
   height: 1px;
 }
 
-button, input, optgroup, select, textarea {
+button,
+input,
+optgroup,
+select,
+textarea {
   font: inherit;
   margin: 0;
 }
@@ -269,24 +304,35 @@ optgroup {
   font-weight: 700;
 }
 
-button, input {
+button,
+input {
   overflow: visible;
 }
 
-button, select {
+button,
+select {
   text-transform: none;
 }
 
-[type="reset"], [type="submit"], button, html [type="button"] {
+[type="reset"],
+[type="submit"],
+button,
+html [type="button"] {
   -webkit-appearance: button;
 }
 
-[type="button"]::-moz-focus-inner, [type="reset"]::-moz-focus-inner, [type="submit"]::-moz-focus-inner, button::-moz-focus-inner {
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner,
+button::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
 
-[type="button"]:-moz-focusring, [type="reset"]:-moz-focusring, [type="submit"]:-moz-focusring, button:-moz-focusring {
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring,
+button:-moz-focusring {
   outline: 1px dotted ButtonText;
 }
 
@@ -316,12 +362,14 @@ textarea {
   overflow: auto;
 }
 
-[type="checkbox"], [type="radio"] {
+[type="checkbox"],
+[type="radio"] {
   box-sizing: border-box;
   padding: 0;
 }
 
-[type="number"]::-webkit-inner-spin-button, [type="number"]::-webkit-outer-spin-button {
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
   height: auto;
 }
 
@@ -330,7 +378,8 @@ textarea {
   outline-offset: -2px;
 }
 
-[type="search"]::-webkit-search-cancel-button, [type="search"]::-webkit-search-decoration {
+[type="search"]::-webkit-search-cancel-button,
+[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
 }
 
@@ -356,7 +405,8 @@ textarea {
   box-sizing: inherit;
 }
 
-ol, ul {
+ol,
+ul {
   margin: 0;
   margin-left: 2.5rem;
   margin-bottom: 0;
@@ -506,13 +556,13 @@ ul li {
   padding-left: 0;
 }
 
-li>ol {
+li > ol {
   margin-left: 1.45rem;
   margin-bottom: calc(1.45rem / 2);
   margin-top: calc(1.45rem / 2);
 }
 
-li>ul {
+li > ul {
   margin-left: 1.45rem;
   margin-bottom: calc(1.45rem / 2);
   margin-top: calc(1.45rem / 2);
@@ -530,7 +580,10 @@ p *:last-child {
   margin-bottom: 0;
 }
 
-ol>li, ul>li, li>p, li>div {
+ol > li,
+ul > li,
+li > p,
+li > div {
   text-align: left;
   margin-bottom: 0;
   align-self: flex-start;
@@ -566,7 +619,8 @@ thead {
   text-align: left;
 }
 
-td, th {
+td,
+th {
   text-align: left;
   border-bottom: 1px solid hsla(0, 0%, 0%, 0.12);
   font-feature-settings: "tnum";
@@ -579,18 +633,22 @@ td, th {
   padding-bottom: calc(0.725rem - 1px);
 }
 
-th:first-child, td:first-child {
+th:first-child,
+td:first-child {
   padding-left: 0;
 }
 
-th:last-child, td:last-child {
+th:last-child,
+td:last-child {
   padding-right: 0;
 }
 
-tt, code {
+tt,
+code {
   background-color: hsla(0, 0%, 0%, 0.04);
   border-radius: 3px;
-  font-family: "SFMono-Regular", Consolas, "Roboto Mono", "Droid Sans Mono", "Liberation Mono", Menlo, Courier, monospace;
+  font-family: "SFMono-Regular", Consolas, "Roboto Mono", "Droid Sans Mono",
+    "Liberation Mono", Menlo, Courier, monospace;
   padding: 0;
   padding-top: 0.2em;
   padding-bottom: 0.2em;
@@ -601,12 +659,18 @@ pre code {
   line-height: 1.42;
 }
 
-code:before, code:after, tt:before, tt:after {
+code:before,
+code:after,
+tt:before,
+tt:after {
   letter-spacing: -0.2em;
   content: " ";
 }
 
-pre code:before, pre code:after, pre tt:before, pre tt:after {
+pre code:before,
+pre code:after,
+pre tt:before,
+pre tt:after {
   content: "";
 }
 
