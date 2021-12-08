@@ -2,7 +2,7 @@ require("dotenv").config()
 
 module.exports = {
   siteMetadata: {
-    title: `CV`,
+    title: `Resume`,
     description: `My Online Curriculum Vitae.`,
     author: `Ratul Maharaj`,
   },
@@ -17,7 +17,7 @@ module.exports = {
       },
     },
     {
-      resolve: 'gatsby-source-graphcms',
+      resolve: "gatsby-source-graphcms",
       options: {
         endpoint: process.env.GRAPHCMS_ENDPOINT,
         token: process.env.GRAPHCMS_TOKEN,
@@ -38,8 +38,8 @@ module.exports = {
         name: `gatsby-starter-default`,
         short_name: `starter`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        background_color: `#EEEEEE`,
+        theme_color: `#EEEEEE`,
         display: `minimal-ui`,
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },

@@ -2,6 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
+import social from "../images/social.png"
 
 function SEO({ description, lang, meta, title }) {
   const { site } = useStaticQuery(
@@ -27,11 +28,15 @@ function SEO({ description, lang, meta, title }) {
         lang,
       }}
       title={title}
-      titleTemplate={defaultTitle ? `%s - ${defaultTitle}` : null}
+      titleTemplate={defaultTitle ? `${defaultTitle} of %s` : null}
       meta={[
         {
           name: `description`,
-          content: metaDescription,
+          content: "Check out my online cv.",
+        },
+        {
+          property: `og:image`,
+          content: social,
         },
         {
           property: `og:title`,
@@ -39,7 +44,7 @@ function SEO({ description, lang, meta, title }) {
         },
         {
           property: `og:description`,
-          content: metaDescription,
+          content: "Check out my online cv.",
         },
         {
           property: `og:type`,
@@ -59,7 +64,7 @@ function SEO({ description, lang, meta, title }) {
         },
         {
           name: `twitter:description`,
-          content: metaDescription,
+          content: "Check out my online cv.",
         },
       ].concat(meta)}
     />
