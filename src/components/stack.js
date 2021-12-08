@@ -1,61 +1,59 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import { motion } from "framer-motion";
+import { motion } from "framer-motion"
 import StackStyles from "./stack.module.css"
 
 function Stack() {
-    const data = useStaticQuery(graphql`
+  const data = useStaticQuery(graphql`
     {
-        allGraphCmsTechStack(sort: {fields: order}) {
+      allGraphCmsTechStack(sort: { fields: order }) {
         edges {
-            node {
+          node {
             id
             name
             link
             logo {
-                url
+              url
             }
-            }
+          }
         }
-        }
+      }
     }
-    `)
-    const stack = data.allGraphCmsTechStack.edges
-    if (stack.length === 0) {
-        return (null)
-    }
-    else {
-
-        return (
-            <>
-                <div className={StackStyles.container}>
-                    <div>
-                        <h4>Tech Stack</h4>
-                    </div>
-                    {
-                        stack.map(edge => {
-                            return (
-                                <a
-                                    key={edge.node.id}
-                                    href={edge.node.link}
-                                    target="_blank"
-                                    rel="noreferrer"
-                                >
-                                    <motion.img
-                                        className={`grayscale`}
-                                        src={edge.node.logo.url}
-                                        alt="Stack"
-                                        whileHover={{ scale: 1.3, rotate: 360 }}></motion.img>
-                                    <p className={StackStyles.logoText}>{edge.node.name}</p>
-                                </a>
-                            )
-                        }
-                        )
-                    }
+  `)
+  const stack = data.allGraphCmsTechStack.edges
+  if (stack.length === 0) {
+    return null
+  } else {
+    return (
+      <>
+        <div className={StackStyles.container}>
+          <div>
+            <h4>Software</h4>
+          </div>
+          <div
+            style={{
+              display: `flex`,
+              flexDirection: `row`,
+              paddingBottom: `30px`,
+            }}
+          >
+            {stack.map(edge => {
+              return (
+                <div>
+                  <img
+                    src={edge.node.logo.url}
+                    style={{ width: `200px` }}
+                    alt="Stack"
+                  ></img>
+                  {/* <p className={StackStyles.logoText}>{edge.node.name}</p> */}
                 </div>
-            </>
-        )
-    }
+              )
+            })}
+          </div>
+        </div>
+      </>
+    )
+  }
 }
 
 export default Stack

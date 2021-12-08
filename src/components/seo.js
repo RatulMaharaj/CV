@@ -32,7 +32,7 @@ function SEO({ description, lang, meta, title }) {
       meta={[
         {
           name: `description`,
-          content: "Check out my online cv.",
+          content: "View my curriculum vitae online!",
         },
         {
           property: `og:image`,
@@ -44,7 +44,7 @@ function SEO({ description, lang, meta, title }) {
         },
         {
           property: `og:description`,
-          content: "Check out my online cv.",
+          content: "View my curriculum vitae online!",
         },
         {
           property: `og:type`,
@@ -64,7 +64,7 @@ function SEO({ description, lang, meta, title }) {
         },
         {
           name: `twitter:description`,
-          content: "Check out my online cv.",
+          content: "View my curriculum vitae online",
         },
       ].concat(meta)}
     />

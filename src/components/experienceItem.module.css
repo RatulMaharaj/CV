@@ -1,86 +1,86 @@
 .container {
-    margin-top: 1rem;
+  margin-top: 1rem;
 }
 
 .wrapper {
-    padding: 1rem 0;
-    flex-direction: row;
-    flex-wrap: nowrap;
+  padding: 1rem 0;
+  flex-direction: row;
+  flex-wrap: nowrap;
 }
 
 .dates {
-    white-space: nowrap;
-    width: auto;
-    margin-top: -0.75rem;
+  white-space: nowrap;
+  width: auto;
+  margin-top: -0.75rem;
 }
 
 .company {
-    padding-left: 3rem;
-    align-items: flex-start;
-    align-self: flex-start;
-    width: 40%;
+  padding-left: 3rem;
+  align-items: flex-start;
+  align-self: flex-start;
+  width: 40%;
 }
 
 .logo {
-    max-width: 250px;
-    align-self: flex-start;
+  max-width: 250px;
+  align-self: flex-start;
 }
 
 .circle {
-    width: 125px;
-    height: 125px;
-    border-radius: 50%;
-    align-self: center;
-    margin-bottom: 1em;
+  width: 125px;
+  height: 125px;
+  border-radius: 50%;
+  align-self: center;
+  margin-bottom: 1em;
 }
 
 .content {
-    padding-left: 1rem;
-    align-items: flex-start;
+  padding-left: 1rem;
+  align-items: flex-start;
 }
 
-.content>* {
-    align-items: flex-start;
-    justify-content: flex-start;
-    text-align: left;
-    padding-right: 3rem;
+.content > * {
+  align-items: flex-start;
+  justify-content: flex-start;
+  text-align: left;
+  padding-right: 3rem;
 }
 
 .richText div {
-    display: inline;
+  display: inline;
 }
 
 .richText a {
-    color: var(--main-accent);
+  color: var(--main-accent);
 }
 
 .richText a:hover {
-    color: var(--secondary-accent);
+  color: var(--secondary-accent);
 }
 
 .tags {
-    flex-direction: row;
-    align-items: center;
-    flex-wrap: wrap;
-    padding: 1rem 0;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 1rem 0;
 }
 
-@media screen and (max-width:768px) {
-    .wrapper {
-        flex-direction: column;
-    }
-    .company {
-        padding: 0;
-        align-items: center;
-        width: 100%;
-    }
-    .content {
-        margin-top: 1rem;
-    }
-    .content>* {
-        padding-right: 1rem;
-    }
-    .logo {
-        align-self: center;
-    }
+@media screen and (max-width: 768px) {
+  .wrapper {
+    flex-direction: column;
+  }
+  .company {
+    padding: 0;
+    align-items: center;
+    width: 100%;
+  }
+  .content {
+    margin-top: 1rem;
+  }
+  .content > * {
+    padding-right: 1rem;
+  }
+  .logo {
+    align-self: center;
+  }
 }
